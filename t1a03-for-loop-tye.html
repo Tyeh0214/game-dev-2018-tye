@@ -9,4 +9,30 @@
    document.getElementById('myText01').value 
 }">
 
+
+<input type=button value="run negative for loop" onclick="{
+
+    document.getElementById('myDiv01').innerHTML = ' '
+    for(let x=document.getElementById('myText01').value; x > 0 ; x--){
+    document.getElementById('myDiv01').innerHTML += `x is ` + x + `<br>`
+}
+
+   document.getElementById('myText01').value 
+}">
+
+
+<input type=button value="run bigger for loop" onclick="{
+
+    document.getElementById('myDiv01').innerHTML = ' '
+    myTemp = 0
+    for(let x=0; x < document.getElementById('myText01').value; x++){
+       myTemp +=  `x is ` + x + `<br>`
+}
+
+   document.getElementById('myDiv01').innerHTML = myTemp
+}">
+
+
+
 <div id="myDiv01">...</div>
+
