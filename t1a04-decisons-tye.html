@@ -1,0 +1,46 @@
+<h2 align=center><font color=red> If Statements by Tye</h2></font>
+
+Type a number between 10 and 100, then 101 and 200, then 201 and 300, and keep going. Have fun!<br>
+<br>
+<input id="myIn" type=text value=10>
+
+<input type=button value="decision if statement" onclick="{
+
+   document.getElementById('myOut').innerHTML = ' '
+
+   x = document.getElementById('myIn').value
+
+   if ((x >= 10)&&(x <= 100)){
+   document.getElementById('myOut').innerHTML += 'Yay numbers!'
+   
+}
+
+   if ((x >= 101)&&(x <= 200)){
+   document.getElementById('myOut').innerHTML += 'Yay more numbers!'
+   
+}
+
+   if ((x >= 201)&&(x <= 300)){
+   document.getElementById('myOut').innerHTML += 'Yay even numbers!'
+   
+}
+
+   if ((x >= 301)&&(x <= 400)){
+   document.getElementById('myOut').innerHTML += 'This is getting repetitive...'
+   
+}
+
+   if ((x >= 10)&&(x <= 100)){
+   document.getElementById('myOut').innerHTML += 'Yay numbers!'
+   
+}
+   
+   if ((x >= 401)&&(x <= 500)){
+   document.getElementById('myOut').innerHTML += 'Please stop...'
+   
+}
+
+
+}">
+
+<div id="myOut">...</div>

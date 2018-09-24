@@ -1,0 +1,170 @@
+<h1 align=center><font color=red><b><i> Loops and Decisions</h1></font></b></i>
+
+
+<input type=text id="myText01" value=121>
+<input type=button value="run for loop" onclick="{
+
+    document.getElementById('myDiv01').innerHTML = ' '
+
+    for(let x=0; x < document.getElementById('myText01').value; x++){
+
+
+
+    if(x % 2 ==1){
+      document.getElementById('myDiv01').innerHTML += '<font color=blue>Odd Number</font>'}
+
+
+    if(x % 2 ==0){
+      document.getElementById('myDiv01').innerHTML += '<font color=red>Even Number</font>'}
+
+
+
+    if(x == 17){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(x == 17){
+      document.getElementById('myDiv01').innerHTML += '<font color=limegreen><b><u><i>My Favourite Number</font></b></u></i>'}
+
+
+
+    if((x % 9 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 9 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=purple>Divisable by Nine</font>'}
+
+
+
+    if((x % 5 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 5 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=lightblue>Divisable by Five</font>'}
+
+
+    
+    if(((x % 5 == 0)&&(x % 10 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(((x % 5 == 0)&&(x % 10 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=darkblue>Divisable by Ten</font>'}
+
+
+
+    if((x % 6 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 6 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=orange>Divisable by Six</font>'}
+
+
+
+    if((x % 2 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 2 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=teal>Multiple of Two</font>'}
+
+
+
+    if(((x % 2 == 0)&&(x % 4 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(((x % 2 == 0)&&(x % 4 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=darkblue>Multiple of Four</font>'}
+
+
+
+    if((x % 3 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 3 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=yellow>Multiple of Three, Good Luck Reading This!</font>'}
+
+
+
+    document.getElementById('myDiv01').innerHTML += ` - x is ` + x + `<br>`
+}
+
+   document.getElementById('myText01').value 
+}">
+
+
+
+
+
+
+
+<input type=button value="run negative for loop" onclick="{
+
+    document.getElementById('myDiv01').innerHTML = ' '
+    for(let x=document.getElementById('myText01').value; x > 0 ; x--){
+
+
+    if(x % 2 ==1){
+      document.getElementById('myDiv01').innerHTML += '<font color=blue>Odd Number</font>'}
+
+
+    if(x % 2 ==0){
+      document.getElementById('myDiv01').innerHTML += '<font color=red>Even Number</font>'}
+
+
+
+    if(x == 17){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(x == 17){
+      document.getElementById('myDiv01').innerHTML += '<font color=limegreen><b><u><i>My Favourite Number</font></b></u></i>'}
+
+
+
+    if((x % 9 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 9 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=purple>Divisable by Nine</font>'}
+
+
+
+    if((x % 5 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 5 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=lightblue>Divisable by Five</font>'}
+
+
+    
+    if(((x % 5 == 0)&&(x % 10 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(((x % 5 == 0)&&(x % 10 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=darkblue>Divisable by Ten</font>'}
+
+
+    if((x % 6 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 6 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=orange>Divisable by Six</font>'}
+
+
+    if((x % 2 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 2 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=teal>Multiple of Two</font>'}
+
+
+
+    if(((x % 2 == 0)&&(x % 4 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if(((x % 2 == 0)&&(x % 4 == 0))&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=darkblue>Multiple of Four</font>'}
+
+
+    if((x % 3 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += ' <b>and</b> '}
+    if((x % 3 == 0)&&(x != 0)){
+      document.getElementById('myDiv01').innerHTML += '<font color=yellow>Multiple of Three, Good Luck Reading This!</font>'}
+
+
+
+    document.getElementById('myDiv01').innerHTML += ` - x is ` + x + `<br>`
+}
+
+   document.getElementById('myText01').value 
+}">
+
+
+
+
+
+
+
+<div id="myDiv01">...</div>
