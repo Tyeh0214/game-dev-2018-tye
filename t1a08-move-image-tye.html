@@ -1,7 +1,13 @@
 <h2 align=center> My Moving Images by Tye </h2>
 
+<script>
+document.onkeydown = checkKey;
 
-
+function checkKey(myEvent) {
+   document.getElementById('myDiv01').innerHTML = 'keyCode: '+myEvent.keyCode
+   if (myEvent.keyCode == 87){ alert('W')}
+}
+</script>
 
 <img id="myImage01" width=120 src="https://techflourish.com/images/book-clipart-gif-13.gif" style="position:absolute; left:300px; top:260px;">
 
@@ -21,3 +27,15 @@
   document.getElementById('myImage04').width = parseInt(document.getElementById('myImage04').width) + 5
 
 }">
+
+<input type=button value="Reset" onclick="{
+  document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 30 + 'px' 
+  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 40 + 'px'
+  document.getElementById('myImage01').width = parseInt(document.getElementById('myImage01').width) + 120
+  document.getElementById('myImage02').style.left = parseInt(document.getElementById('myImage02').style.left) + 10 + 'px' 
+  document.getElementById('myImage03').style.left = parseInt(document.getElementById('myImage03').style.left) + 10 + 'px' 
+  document.getElementById('myImage04').style.left = parseInt(document.getElementById('myImage04').style.left) + 14 + 'px' 
+  document.getElementById('myImage04').width = parseInt(document.getElementById('myImage04').width) - 10
+
+}">
+<div id="myDiv01">...</div>
