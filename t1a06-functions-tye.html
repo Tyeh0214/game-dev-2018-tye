@@ -6,19 +6,40 @@ function myFun(){
      document.getElementById('myText01').value
 }
 
+
+
+function startMusic(){
+
+	document.getElementById('myAudio').play()
+
+}
+
 
 </script>
 
 
 <h2 align=center><font color=blue>Functions by Tye</h2></font>
 
+<b><font color=purple> More Functions in t1a08 assignment... I'm just lazy</font><b><br>
+
+<audio id="myAudio" src="imperialborks.mp3"></audio>
+
+<input type=button value="Music Function" onclick="{
+
+startMusic()
+
+}">
+
+<br>
+
 <input type=text id="myText01" value=12>
-<input type=button value="Run Function" onclick="{
+<input type=button value="Math Function" onclick="{
    
 myFun()
 
 
 
 }">
+
 
 <div id="myDiv01">...</div>
