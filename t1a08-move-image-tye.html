@@ -1,6 +1,6 @@
 <body style = "background: url(https://storywarren.com/wp-content/uploads/2016/09/space-1.jpg); background-size: 100% 100%">
 <h2 align=center> My Moving Images by Tye </h2>
-<b><font color=white> WASD For Mr. Krabs And Plankton - UpDownLeftRight Arrow Keys For Spcaeship - 1235 For Alien <br> Space Is Jump And Shift Is To Reset Jump For Mr. Krabs And Plankton (Press Each Once)</font></b><br><br>
+<b><font color=white> WASD For Bill Nye The Science Guy - UpDownLeftRight Arrow Keys For Spcaeship - 1235 For Alien <br> Space Is Jump And Shift Is To Reset Jump For Bill Nye The Science Guy (Press Each Once)</font></b><br><br>
 
 
 
@@ -34,6 +34,9 @@ function startMusic(){
 }
 
 
+
+
+
 myStart = new Date().getTime()
 
 
@@ -46,7 +49,7 @@ function checkKey(myEvent) {
    document.getElementById('myDiv01').innerHTML = '<font color=white>Seconds: ' + myDuration + ', keyCode: '+ myEvent.keyCode
 
    
-   if(myDuration >= 30){alert('Mr. Krabs and Plankton Win!') + document.getElementById('myAudio').stop()}
+   if(myDuration >= 30){alert('Bill Nye The Science Guy Wins!')}
 
    if(myHitOther('myImage01','myImage02')){alert('Alien Wins!')}  
  
@@ -55,25 +58,49 @@ function checkKey(myEvent) {
    startMusic()
    
    
-								//Mr. Krabs and Plankton   
+								//Bill Nye The Science Guy + Text Bubble
 
 
-   if (myEvent.keyCode == 87){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' } //W
+   if (myEvent.keyCode == 87){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 5 + 'px'
+
+	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) - 5 + 'px'
+
+ 																			} //W
 
 
-   if (myEvent.keyCode == 65){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 5 + 'px' } //A
+   if (myEvent.keyCode == 65){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 5 + 'px' 
+
+	document.getElementById('myImage04').style.left = parseInt(document.getElementById('myImage04').style.left) - 5 + 'px'
+
+																			} //A
   
    
-   if (myEvent.keyCode == 83){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' } //S
+   if (myEvent.keyCode == 83){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 5 + 'px'
+
+	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) + 5 + 'px'
+
+ 																			} //S
 
 
-   if (myEvent.keyCode == 68){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'} //D
+   if (myEvent.keyCode == 68){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
+
+	document.getElementById('myImage04').style.left = parseInt(document.getElementById('myImage04').style.left) + 5 + 'px'
+
+																			} //D
 
    
-   if (myEvent.keyCode == 32){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 75 + 'px' } //Space
+   if (myEvent.keyCode == 32){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 75 + 'px'
+
+	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) - 75 + 'px'
+
+																			 } //Space
 
 
-   if (myEvent.keyCode == 16){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 75 + 'px' } //Shift
+   if (myEvent.keyCode == 16){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 75 + 'px' 
+
+	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) + 75 + 'px' 
+
+																			} //Shift
 
 
 
@@ -130,9 +157,10 @@ function checkKey(myEvent) {
 </script>
 
 
-	<script>     //Mr. Krabs and Plankton     </script>   
+	<script>     //Bill Nye The Science Guy + Text Bubble
+    </script>   
 
-<b><font color=white>Mr. Krabs And Plankton</font></b>
+<b><font color=white>Bill Nye The Science Guy</font></b>
 
 <table border=0> 
 
@@ -142,6 +170,8 @@ function checkKey(myEvent) {
    if(myHitOther('myImage01','myImage02')){alert('Alien Wins!')} 
 	document.getElementById('myImage01').style.top = 
 		parseInt(document.getElementById('myImage01').style.top) - 5 + 'px' 
+			document.getElementById('myImage04').style.top = 
+				parseInt(document.getElementById('myImage04').style.top) - 5 + 'px' 
 }"></td></tr>
 
 
@@ -151,6 +181,8 @@ function checkKey(myEvent) {
    if(myHitOther('myImage01','myImage02')){alert('Alien Wins!')} 
 	document.getElementById('myImage01').style.left = 
 		parseInt(document.getElementById('myImage01').style.left) - 5 + 'px' 
+			document.getElementById('myImage04').style.left = 
+				parseInt(document.getElementById('myImage04').style.left) - 5 + 'px' 
 }">
 
 <td><td><input type=button value="Right" onclick="{
@@ -158,6 +190,8 @@ function checkKey(myEvent) {
    if(myHitOther('myImage01','myImage02')){alert('Alien Wins!')} 
 	document.getElementById('myImage01').style.left = 
 		parseInt(document.getElementById('myImage01').style.left) + 5 + 'px' 
+			document.getElementById('myImage04').style.left = 
+				parseInt(document.getElementById('myImage04').style.left) + 5 + 'px' 
 }"></td></tr>
 
 
@@ -167,6 +201,8 @@ function checkKey(myEvent) {
    if(myHitOther('myImage01','myImage02')){alert('Alien Wins!')} 
 	document.getElementById('myImage01').style.top = 
 		parseInt(document.getElementById('myImage01').style.top) + 5 + 'px' 
+			document.getElementById('myImage04').style.top = 
+				parseInt(document.getElementById('myImage04').style.top) + 5 + 'px' 
 }"></td></tr>
 
 </table>
@@ -269,8 +305,7 @@ function checkKey(myEvent) {
 </table>
 
 
-
-<img id="myImage01" width=120 src="https://techflourish.com/images/book-clipart-gif-13.gif" style="position:absolute; width:120px; height:120; left:300px; top:360px;">
+<img id="myImage01" width=90 src="https://vignette.wikia.nocookie.net/le-miiverse-resource/images/a/ac/Chahha.gif/revision/latest?cb=20160119234106" style="position:absolute; width:90px; height:90; left:300px; top:360px;">
 
 
 <img id="myImage02" width=120 src="flyingalien.gif" style="position:absolute; width:120px; height:120; left:300px; top:100px;">
@@ -278,6 +313,8 @@ function checkKey(myEvent) {
 
 <img id="myImage03" width=120 src="spaceship.png" style="position:absolute; width:120px; height:120; left:500px; top:100px;">
 
+
+<img id="myImage04" width=120 src="http://l.wigflip.com/00izaFmW/wigflip-ds.png" style="position:absolute; width:300px; left:300px; top:300px;">
 
 
 <div id="myDiv01"></div>
