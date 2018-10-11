@@ -49,7 +49,7 @@
 <div id="myDiv01">...</div>
 
 <br>
-<b>Definitely Useful</b>
+<b>Definitely Useful</b><br>
 <input type=button value="Create Statement" onclick="{
 
     document.getElementById('myDiv02').innerHTML = ''
@@ -84,45 +84,102 @@
 <div id="myDiv02">...</div><br>
 
 
-<b><font color=red>IN PROGRESS</font></b><br>
-<b>Input Numbers To</b><br>
-<input type=button value="Generate Multiplication Table" onclick="{
+<input type=button value="Generate Chart" onclick="{
 
     document.getElementById('myDiv03').innerHTML = ''
 
-    let myChart = [] //Creates Array
-    myChart[0] = []
-    myChart[1] = []
-    myChart[2] = []
+    let myChart = [document.getElementById('myRow').value] //Creates Array
+    myChart[0] = [document.getElementById('myColumn').value]
+    myChart[1] = [document.getElementById('myColumn').value]
+    myChart[2] = [document.getElementById('myColumn').value]
 
 
-    myChart[0][0] = document.getElementById('myText07').value 
-    myChart[0][1] = document.getElementById('myText07').value 
-    myChart[0][2] = document.getElementById('myText07').value 
+    myChart[0][0] = ''
+    myChart[0][1] = ''
+    myChart[0][2] = ''
 
-    myChart[1][0] = document.getElementById('myText08').value 
-    myChart[1][1] = document.getElementById('myText08').value 
-    myChart[1][2] = document.getElementById('myText08').value 
+    myChart[1][0] = ''
+    myChart[1][1] = ''
+    myChart[1][2] = ''
 
-    myChart[2][0] = document.getElementById('myText09').value 
-    myChart[2][1] = document.getElementById('myText09').value 
-    myChart[2][2] = document.getElementById('myText09').value 
+    myChart[2][0] = ''
+    myChart[2][1] = ''
+    myChart[2][2] = ''
 
+
+if((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 0)){
+
+myChart[0][0] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 1)){
+
+myChart[0][1] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 0)&&(document.getElementById('myColumn').value == 2)){
+
+myChart[0][2] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 0)){
+
+myChart[1][0] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 1)){
+
+myChart[1][1] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 1)&&(document.getElementById('myColumn').value == 2)){
+
+myChart[1][2] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 0)){
+
+myChart[2][0] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 1)){
+
+myChart[2][1] = document.getElementById('myText09').value
+
+}
+
+if((document.getElementById('myRow').value == 2)&&(document.getElementById('myColumn').value == 2)){
+
+myChart[2][2] = document.getElementById('myText09').value
+
+}
 
 	document.getElementById('myDiv03').innerHTML += `
 
-  <br><table border=0>
-
-  <tr><td> ${myChart[0][0]} </td><td> ${myChart[0][1]} </td><td> ${myChart[0][2]} </td></tr>
-  <tr><td> ${myChart[1][0]} </td><td> ${myChart[1][1]} </td><td> ${myChart[1][2]} </td></tr>
-  <tr><td> ${myChart[2][0]} </td><td> ${myChart[2][1]} </td><td> ${myChart[2][2]} </td></tr>
+  <br><table border=1>
+  <td></td><td></td><td><b> Column 0 </b></td><td><b> Column 1 </b></td><td><b> Column 2 </b></td>
+  <tr><td><b> Row 0 </b></td><td></td><td> ${myChart[0][0]} </td><td> ${myChart[0][1]} </td><td> ${myChart[0][2]} </td></tr>
+  <tr><td><b> Row 1 </b></td><td></td><td> ${myChart[1][0]} </td><td> ${myChart[1][1]} </td><td> ${myChart[1][2]} </td></tr>
+  <tr><td><b> Row 2 </b></td><td></td><td> ${myChart[2][0]} </td><td> ${myChart[2][1]} </td><td> ${myChart[2][2]} </td></tr>
   </table>
 `
 
+
 }">
 <br>
-<input type=text id="myText07" size=5 value=Tye>
-<input type=text id="myText08" size=5 value=Is>
-<input type=text id="myText09" size=5 value=Awesome>
+
+<b>Row</b>
+<input type=text id="myRow" size=6 value=2><br>
+<b>Column</b>
+<input type=text id="myColumn" size=6 value=1><br>
+<b>Text</b>
+<input type=text id="myText09" size=6 value=Yay!><br>
 
 <div id="myDiv03">...</div>
