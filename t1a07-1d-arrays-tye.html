@@ -21,7 +21,82 @@
 }">
 
 
- 
+<input type=button value="Names" onclick="{
+
+  myName = [] // creates an array
+   myName[0] = `Joe`
+   myName[1] = `Dio`
+   myName[2] = `Tye`
+   myName[3] = `Amanda`
+
+  document.getElementById('myDiv01').innerHTML = ``
+
+  for (let myLoop=0; myLoop < 4; myLoop++ ){
+
+    document.getElementById('myDiv01').innerHTML += myLoop + `:`+ myName[myLoop] + `<br>`
+
+}
+
+}">
+
+
+<input type=button value="Birthdays" onclick="{
+
+  myBday = [] // creates an array
+   myBday[0] = `01/14/02`
+   myBday[1] = `06/26/02`
+   myBday[2] = `05/13/02`
+   myBday[3] = `09/13/00`
+
+  document.getElementById('myDiv01').innerHTML = ``
+
+  for (let myLoop=0; myLoop < 4; myLoop++ ){
+
+    document.getElementById('myDiv01').innerHTML += myLoop + `:`+ myBday[myLoop] + `<br>`
+
+}
+
+}">
+
+
+<input type=button value="Grades" onclick="{
+
+  myGrades = [] // creates an array
+   myGrades[0] = `C+`
+   myGrades[1] = `A`
+   myGrades[2] = `C+`
+   myGrades[3] = `A`
+   myGrades[4] = `B`
+
+  document.getElementById('myDiv01').innerHTML = ``
+
+  for (let myLoop=0; myLoop < 5; myLoop++ ){
+
+    document.getElementById('myDiv01').innerHTML += myLoop + `:`+ myGrades[myLoop] + `<br>`
+
+}
+
+}"> 
+
+
+<input type=button value="Energy Drinks Best to Worst" onclick="{
+
+  myEneryDrinks = [] // creates an array
+   myEneryDrinks[0] = `AMP`
+   myEneryDrinks[1] = `Moster`
+   myEneryDrinks[2] = `Rockstar`
+   myEneryDrinks[3] = `Redbull`
+   myEneryDrinks[4] = `Joker`
+
+  document.getElementById('myDiv01').innerHTML = ``
+
+  for (let myLoop=0; myLoop < 5; myLoop++ ){
+
+    document.getElementById('myDiv01').innerHTML += myLoop + `:`+ myEneryDrinks[myLoop] + `<br>`
+
+}
+
+}"> 
 
 
 <div id="myDiv01">...</div>
