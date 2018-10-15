@@ -1,0 +1,137 @@
+<h1 align=center><font color=purple> Events By Tye </font></h1>
+
+<b><font color=red>AUDIO ON</font></b>
+<br>
+<b><font color=red> ONE MORE EVENT NEEDED </font></b>
+<br>
+<body onload = startMusic() </body>
+
+
+
+
+
+
+<div id="myDiv01" style="background:lime;width:120; float:left" onDblClick="{
+
+	document.getElementById('myOutput01').innerHTML = ''
+	document.getElementById('myOutput01').innerHTML += '<font color=blue>Good Job You Clicked Something Twice!</font>'
+
+}">Double Click Me!</div>
+
+
+<div id="myOutput01">...</div>
+
+
+<input type=text value="Change Me!" onChange="{
+
+	document.getElementById('myOutput02').innerHTML = 'You change me to: ' + this.value
+
+}">
+
+<div id="myOutput02">...</div>
+
+
+<input id="myText01" type=text value="Select Me!" onSelect="{
+
+	document.getElementById('myOutput03').innerHTML = 'You selected: ' + document.getElementById('myText01').value
+
+}">
+
+<div id="myOutput03">...</div>
+
+
+<input type=text value="Type Something!" onBlur="{
+
+	document.getElementById('myOutput04').innerHTML = 'Hey Keeping Typing!'
+
+}">
+
+<div id="myOutput04">...</div>
+
+
+<input type=text value="Click Me... I Dare You..." onFocus="{
+
+
+
+	 let myEnd = new Date().getTime()
+          let myDuration = Math.round((myEnd-myStart)/1000)
+   	   document.getElementById('myOutput05').innerHTML = myDuration + ' seconds until EXPLOSION!!'
+	    if(myDuration == 0){alert('Good Job! You Died!')}	
+      	   
+}">
+
+<div id="myOutput05">...</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+myStart = new Date().getTime()
+
+document.onkeydown = checkKey 
+
+function checkKey(myEvent) {
+   
+   
+   
+
+
+   if (myEvent.keyCode == 87){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 5 + 'px'
+
+	document.getElementById('myImage02').style.top = parseInt(document.getElementById('myImage02').style.top) - 5 + 'px'
+
+ 																			} //W
+
+
+   if (myEvent.keyCode == 65){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 5 + 'px' 
+
+	document.getElementById('myImage02').style.left = parseInt(document.getElementById('myImage02').style.left) - 5 + 'px'
+
+																			} //A
+  
+   
+   if (myEvent.keyCode == 83){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 5 + 'px'
+
+	document.getElementById('myImage02').style.top = parseInt(document.getElementById('myImage02').style.top) + 5 + 'px'
+
+ 																			} //S
+
+
+   if (myEvent.keyCode == 68){ document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
+
+	document.getElementById('myImage02').style.left = parseInt(document.getElementById('myImage02').style.left) + 5 + 'px'
+
+																			} //D
+
+
+}							
+
+
+
+function startMusic(){
+
+	document.getElementById('myAudio').play()
+
+}
+
+
+
+
+</script>
+
+
+<audio id="myAudio" src="imperialborks.mp3"></audio>
+<img id="myImage01" width=90 src="https://vignette.wikia.nocookie.net/le-miiverse-resource/images/a/ac/Chahha.gif/revision/latest?cb=20160119234106" style="position:absolute; width:90px; height:90; left:400px; top:130px;">
+<img id="myImage02" width=90 src="https://i.pixelspeechbubble.com/LTAGZpBv/pixel-speech-bubble.gif" style="position:absolute; width:200px; left:450px; top:80px; ">
