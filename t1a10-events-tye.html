@@ -2,7 +2,7 @@
 
 <b><font color=red>AUDIO ON</font></b>
 <br>
-<b><font color=red> ONE MORE EVENT NEEDED </font></b>
+<b>Jump With Space To The Right Only</b>
 <br>
 <body onload = startMusic() </body>
 
@@ -51,13 +51,10 @@
 
 <input type=text value="Click Me... I Dare You..." onFocus="{
 
-
-
 	 let myEnd = new Date().getTime()
           let myDuration = Math.round((myEnd-myStart)/1000)
-   	   document.getElementById('myOutput05').innerHTML = myDuration + ' seconds until EXPLOSION!!'
-	    if(myDuration == 0){alert('Good Job! You Died!')}	
-      	   
+   	   document.getElementById('myOutput05').innerHTML = '10 seconds until EXPLOSION!!'	
+      	    if(myDuration >= 10){alert('Good Job! You Died!')}
 }">
 
 <div id="myOutput05">...</div>
@@ -80,12 +77,11 @@
 
 myStart = new Date().getTime()
 
-document.onkeydown = checkKey 
+document.onkeydown = checkKey01 
+document.onkeyup = checkKey02
 
-function checkKey(myEvent) {
-   
-   
-   
+function checkKey01(myEvent) {
+
 
 
    if (myEvent.keyCode == 87){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 5 + 'px'
@@ -115,7 +111,17 @@ function checkKey(myEvent) {
 
 																			} //D
 
+  
+   if (myEvent.keyCode == 32){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 75 + 'px'
 
+	document.getElementById('myImage02').style.top = parseInt(document.getElementById('myImage02').style.top) - 75 + 'px'
+
+         document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 45 + 'px'
+
+	  document.getElementById('myImage02').style.left = parseInt(document.getElementById('myImage02').style.left) + 45 + 'px'
+	  
+
+																			 } //Space
 }							
 
 
@@ -127,11 +133,20 @@ function startMusic(){
 }
 
 
+function checkKey02(myEvent) {
+
+   if (myEvent.keyCode == 32){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 75 + 'px'
+
+	document.getElementById('myImage02').style.top = parseInt(document.getElementById('myImage02').style.top) + 75 + 'px'
+
+																			 } //Space
+}
+
 
 
 </script>
 
 
 <audio id="myAudio" src="imperialborks.mp3"></audio>
-<img id="myImage01" width=90 src="https://vignette.wikia.nocookie.net/le-miiverse-resource/images/a/ac/Chahha.gif/revision/latest?cb=20160119234106" style="position:absolute; width:90px; height:90; left:400px; top:130px;">
+<img id="myImage01" width=200 src="THECARLTON.gif" style="position:absolute; width:200px; height:120; left:400px; top:130px;">
 <img id="myImage02" width=90 src="https://i.pixelspeechbubble.com/LTAGZpBv/pixel-speech-bubble.gif" style="position:absolute; width:200px; left:450px; top:80px; ">
