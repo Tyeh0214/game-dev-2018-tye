@@ -1,6 +1,6 @@
 <body style = "background: url(https://storywarren.com/wp-content/uploads/2016/09/space-1.jpg); background-size: 100% 100%">
 <h2 align=center> My Moving Images by Tye </h2>
-<b><font color=white> WASD For Bill Nye The Science Guy - UpDownLeftRight Arrow Keys For Spcaeship - 1235 For Alien <br> Space Is Jump And Shift Is To Reset Jump For Bill Nye The Science Guy (Press Each Once)</font></b><br><br>
+<b><font color=white> WASD For Bill Nye The Science Guy - UpDownLeftRight Arrow Keys For Spcaeship - 1235 For Alien <br> Space Is Jump For Bill Nye The Science Guy (He Can Only Jump To The Right)</font></b><br><br>
 
 
 
@@ -40,9 +40,10 @@ function startMusic(){
 myStart = new Date().getTime()
 
 
-document.onkeydown = checkKey 
+document.onkeydown = checkKey01
+document.onkeyup = checkKey02
 
-function checkKey(myEvent) {
+function checkKey01(myEvent) {
    
    let myEnd = new Date().getTime()
    let myDuration = Math.round((myEnd-myStart)/1000)
@@ -93,14 +94,11 @@ function checkKey(myEvent) {
 
 	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) - 75 + 'px'
 
+	 document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 75 + 'px'
+
+	  document.getElementById('myImage04').style.left = parseInt(document.getElementById('myImage04').style.left) + 75 + 'px'
+
 																			 } //Space
-
-
-   if (myEvent.keyCode == 16){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 75 + 'px' 
-
-	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) + 75 + 'px' 
-
-																			} //Shift
 
 
 
@@ -153,6 +151,14 @@ function checkKey(myEvent) {
 
 }
 
+function checkKey02(myEvent) {
+
+   if (myEvent.keyCode == 32){ document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 75 + 'px'
+
+	document.getElementById('myImage04').style.top = parseInt(document.getElementById('myImage04').style.top) + 75 + 'px'
+
+																			 } //Space
+}
 
 </script>
 
