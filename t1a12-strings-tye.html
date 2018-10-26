@@ -1,0 +1,122 @@
+
+<h2 align=center>String Manipulation functions by Tye</h2>
+
+<input id="myIn" type=text size=30 value="The World is good, and bad!">
+
+<input type=button value=".toUpperCase()" onclick="{
+
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.toUpperCase()
+           
+}">
+
+
+
+<input type=button value=".replace()" onclick="{
+
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.replace('World is good, and', 'School is')
+           
+}">
+
+
+
+<input type=button value=".indexOf()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.indexOf('World')
+
+           
+}">
+
+
+
+<input type=button value=".split()" onclick="{
+  myArray = []
+  myArray = document.getElementById('myIn').value.split(',')
+  document.getElementById('myOut').innerHTML = myArray[0]
+
+}">
+
+
+<input type=button value=".italics()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.italics()
+
+           
+}">
+
+
+
+<input type=button value=".strike()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.strike()
+
+           
+}">
+
+
+
+<input type=button value=".fontcolor()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.fontcolor('lime')
+
+           
+}">
+
+
+
+<input type=button value=".big()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.big()
+
+           
+}">
+
+
+
+<input type=button value=".small()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.small()
+
+           
+}">
+
+
+
+<input type=button value=".toLowerCase()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.toLowerCase()
+
+           
+}">
+
+
+
+<input type=button value=".big().toLowerCase().fontcolor()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.big().toLowerCase().fontcolor('red')
+
+           
+}">
+
+
+
+<input type=button value=".small().toUpperCase().fontcolor()" onclick="{
+     
+  document.getElementById('myOut').innerHTML = 
+     document.getElementById('myIn').value.small().toUpperCase().fontcolor('orange')
+
+           
+}">
+
+<div id="myOut">...</div>
+
+<a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">lookup</a>

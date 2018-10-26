@@ -1,20 +1,88 @@
 <h2 align=center><font color=red> If Else Statements by Tye</h2></font>
+
 
-<input id="myIn" type=text value=15>
+<script>
 
-<input type=button value="Else Statment" onTouchStart="{
+function myCheck() {
 
-   document.getElementById('myOut').innerHTML = ''
+    var myCheckBox = document.getElementById("myCheckBox");
 
-   if (document.getElementById('myIn').value < 10){
-       document.getElementById('myOut').innerHTML += 'Yay less Than 10!<br>'
-   
-   } else {
+    var myOut02 = document.getElementById("myOut02");
 
-	document.getElementById('myOut').innerHTML += 'Wow It\'s Bigger Than 10!<br>'
+    if (myCheckBox.checked == true){
 
-  }
+        myOut02.style.display = "block";
+
+    } else {
+
+	myOut02.style.display = "none";
+
+    }
+
+}
+
+</script>
+
+
+
+Show Statement: <input type=checkbox id="myCheckBox" onclick="{
+
+myCheck()
+
+
 
 }">
 
-<div id="myOut">...</div>
+<br>
+
+<input id="myIn" type=text value=201>
+
+<input type=button value="Else Statment" onclick="{
+
+   x = document.getElementById('myIn').value
+
+   document.getElementById('myOut01').innerHTML = ''
+   document.getElementById('myOut02').innerHTML = ''
+
+              if (x < 10){
+       document.getElementById('myOut01').innerHTML += 'Yay less Than 10!'
+       document.getElementById('myOut02').innerHTML += 'if (x < 10)'
+   
+                          } else {
+
+	               if ((x > 10)&&(x < 20)){
+                 document.getElementById('myOut01').innerHTML += 'More Than 10 But Less Than 20'
+                 document.getElementById('myOut02').innerHTML += 'if ((x > 10)&&(x < 20))'
+   
+	                                       } 
+ 	                          } 
+
+                if (((x >= 100)&&(x <= 200))||((x >= 300)&&(x <= 400))){
+         document.getElementById('myOut01').innerHTML += 'Inbetween 100 and 200 Or Inbetween 300 And 400'
+         document.getElementById('myOut02').innerHTML += 'if (((x > 100)&&(x < 200))||((x > 300)&&(x < 400)))'
+				                                                                   
+                                                                    } else {
+
+	               if ((((x >= 500)&&(x <= 600))||((x >= 700)&&(x <= 800)))||(((x >= 900)&&(x <= 1000))||((x >= 1100)&&(x <= 1200)))){
+                 document.getElementById('myOut01').innerHTML += 'Inbetween 500 and 1200'
+                 document.getElementById('myOut02').innerHTML += 'if ((((x >= 500)&&(x <= 600))||((x >= 700)&&(x <= 800)))||(((x >= 900)&&(x <= 1000))||((x >= 1100)&&(x <= 1200))))'
+   
+	                                       												  } 
+ 	                          					    } 
+
+                if (((((x > 200) && (x < 300)) || ((x > 400) && (x < 500))) || (((x > 600) && (x < 700)) || ((x > 800)&&(x < 900)))) || ((x > 1000) && (x < 1100))){
+         document.getElementById('myOut01').innerHTML += 'Plz Work'
+         document.getElementById('myOut02').innerHTML += 'if (((((x > 200) && (x < 300)) || ((x > 400) && (x < 500))) || (((x > 600) && (x < 700)) || ((x > 800)&&(x < 900)))) || ((x > 1000) && (x < 1100)))'
+				                                                                   
+                                                                   													     }
+
+              
+                                          
+
+}"> 
+
+<br><div id="myOut01" style= float:left></div>
+
+<br>
+
+<div id="myOut02" style="display:none">...</div>
