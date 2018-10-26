@@ -1,0 +1,21 @@
+<h2 align=center>Passing to functions by Tye</h2>
+
+<input id="myIn" type=text  value="">
+
+<input type=button value="myFun('Yay!')" onclick="{
+   
+   document.getElementById('myOut').innerHTML += myFun('Yay!')
+           
+}">
+
+
+<script>
+
+function myFun(myIn){
+  return myIn + '<br>'
+}
+
+</script>
+
+
+<div id="myOut"></div><br>
