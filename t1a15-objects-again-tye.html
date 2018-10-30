@@ -3,10 +3,14 @@
 Srore these Items in a Javascript object <br>
 
 <textarea id="myTextAreaObject" rows=8 cols=70 wrap="false">{
-   "firstName": "John" ,
-   "lastName": "Doe",
-   "age": 50,
-   "eyeColour": "blue"
+
+   "firstName": "Tye" ,
+   "lastName": "Harris",
+   "age": 16,
+   "eyeColour": "Blue",
+   "hairColour": "Blonde",
+   "build": "Medium"
+
 }</textarea><br>
 
 
@@ -19,7 +23,60 @@ Srore these Items in a Javascript object <br>
      JSON.parse(document.getElementById('myTextAreaObject').value)
 
 
-	document.getElementById('myDiv128').innerHTML = 'Name: ' + myPerson.firstName + ' ' + myPerson.lastName + ', Age: ' + myPerson.age + ', Eye Colour: ' + myPerson.eyeColour + '<br>'
+	document.getElementById('myDiv128').innerHTML = '<b>Name: </b>' + myPerson.firstName + ' ' + myPerson.lastName + ', <b>Age: </b>' + myPerson.age + ', <b>Eye Colour: </b>' + myPerson.eyeColour + ', <b>Hair Colour: </b>' + myPerson.hairColour + ', <b>Build: </b>' + myPerson.build + '<br>'
 }"><br><br>
 
 <div id="myDiv128">...</div><br>
+
+
+
+
+
+
+
+<textarea id="myTextAreaObject2" rows=8 cols=70 wrap="false">{
+
+   "firstName": "Tye" ,
+   "lastName": "Harris",
+   "years": 7,
+   "rank": "Black",
+   "degree": "II",
+   "title": "Canada Champion"
+
+}</textarea><br>
+
+
+
+<input id="myButton1" type=button value="Store as an object... again... yay creativity!" onclick="{
+
+	var myTaekwondo = {}
+
+        myTaekwondo =
+     JSON.parse(document.getElementById('myTextAreaObject2').value)
+
+
+	document.getElementById('myDiv1').innerHTML = '<b>Name: </b>' + myTaekwondo.firstName + ' ' + myTaekwondo.lastName + ', <b>Years in Taekwondo: </b>' + myTaekwondo.years + ', <b>Rank: </b>' + myTaekwondo.rank + ', <b>Degree: </b>' + myTaekwondo.degree + ', <b>Title: </b>' + myTaekwondo.title + '<br>'
+}"><br><br>
+
+<div id="myDiv1">...</div><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
