@@ -1,0 +1,254 @@
+<h1 align=center>Encryption By Tye</h1>
+<b> If you're using the annoying encrypt/decrypt type "hola" in the text area</b><br><br>
+<textarea id="myArea01" rows=4 cols=77 placeholder="Type something..."></textarea><br><br>
+
+
+
+
+
+<input type=button value="Annoying Encrypt" onclick="{
+
+myEncrypt()
+
+document.getElementById('myArea01').value = ''
+
+}"><br><br>
+
+<input type=button value="Better Encrypt" onclick="{
+
+myEncrypt2()
+
+document.getElementById('myArea01').value = ''
+
+}"><br><br>
+
+<input type=button value="Base64 Encrypt" onclick="{
+
+myEncrypt3()
+
+document.getElementById('myArea01').value = ''
+
+}"><br><br>
+
+
+
+
+
+
+
+
+
+<textarea id="myArea02" rows=4 cols=77 placeholder="Encrypted text..."></textarea><br><br>
+
+
+
+
+
+
+
+<input type=button value="Annoying Decrypt" onclick="{
+
+myDecrypt()
+
+
+document.getElementById('myArea02').value = ''
+
+}"><br><br>
+
+<input type=button value="Better Decrypt" onclick="{
+
+myDecrypt2()
+
+
+document.getElementById('myArea02').value = ''
+
+}"><br><br>
+
+<input type=button value="Base64 Decrypt" onclick="{
+
+myDecrypt3()
+
+
+document.getElementById('myArea02').value = ''
+
+}"><br><br>
+
+
+
+
+
+
+
+<textarea id="myArea03" rows=4 cols=77 placeholder="Decrypted text..."></textarea>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+function myEncrypt(){
+
+	myEncrypt = document.getElementById('myArea01').value.toLowerCase().split('')
+	for (let myLoop=0; myLoop < myEncrypt.length; myLoop++){
+		if (myEncrypt[0] == 'h'){
+		    myEncrypt[0] = 'i'
+		}
+		if (myEncrypt[1] == 'o'){
+		    myEncrypt[1] = 'p'
+		}
+		if (myEncrypt[2] == 'l'){
+		    myEncrypt[2] = 'm'
+		}
+		if (myEncrypt[3] == 'a'){
+		    myEncrypt[3] = 'b'
+		}
+
+	}
+	document.getElementById('myArea02').value = myEncrypt.join('')
+}
+
+function myDecrypt(){
+
+	myDecrypt = document.getElementById('myArea02').value.toLowerCase().split('')
+	for (let myLoop=0; myLoop < myDecrypt.length; myLoop++){
+		if (myDecrypt[0] == 'i'){
+		    myDecrypt[0] = 'h'
+		}
+		if (myDecrypt[1] == 'p'){
+		    myDecrypt[1] = 'o'
+		}
+		if (myDecrypt[2] == 'm'){
+		    myDecrypt[2] = 'l'
+		}
+		if (myDecrypt[3] == 'b'){
+		    myDecrypt[3] = 'a'
+		}
+
+	}
+	document.getElementById('myArea03').value = myDecrypt.join('')
+}
+
+
+// Easy Encryption and Decryption Above
+
+
+
+
+
+
+
+
+// More Complicated Encryption and Decryption Below
+
+
+function myEncrypt2(){
+
+
+       var x = document.getElementById('myArea01').value 
+      
+       myTemp = ''
+
+ 	for (let myLoop=0; myLoop < x.length; myLoop++){
+
+	
+	myTemp += String.fromCharCode(x.charCodeAt(myLoop) + 420)
+
+		  
+	}
+					
+
+	document.getElementById('myArea02').value = myTemp
+}
+
+
+function myDecrypt2(){
+
+
+       var x = document.getElementById('myArea02').value 
+      
+       myTemp = ''
+
+ 	for (let myLoop=0; myLoop < x.length; myLoop++){
+
+	
+	myTemp += String.fromCharCode(x.charCodeAt(myLoop) - 420)
+
+		  
+	}
+					
+
+	document.getElementById('myArea03').value = myTemp
+
+}
+
+
+function myEncrypt3(){
+
+      let myTemp = ''
+	
+	myTemp += btoa(document.getElementById('myArea01').value)				
+
+	document.getElementById('myArea02').value = myTemp
+}
+
+
+function myDecrypt3(){
+
+      let myTemp = ''
+	
+	myTemp += atob(document.getElementById('myArea02').value)					
+
+	document.getElementById('myArea03').value = myTemp
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

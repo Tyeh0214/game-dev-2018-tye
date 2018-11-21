@@ -1,0 +1,99 @@
+
+
+<h2 align=center>Extended Classes By Tye</h2>
+
+<b><font color=red> I used an array. Take a look! </font></b><br><br>
+
+<input type=text id="myDogInput" size=5 placeholder="0-3" value="">
+<input type=text id="myDogInput01" size=5 placeholder="0-2" value="">
+
+
+<input id="myButton02" type="button" value="Check Out My Doggie" onclick="{
+
+	document.getElementById('myDiv01').innerHTML = ''
+
+ class myDogs {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv01').innerHTML += 'This is ' + this.myName + '. He is ' + this.myAge + ' years old.<br>'
+    }
+
+ }  // end class myDogs
+
+
+    let myDog = [] 
+    myDog[0] = []
+    myDog[1] = []
+    myDog[2] = []
+    myDog[3] = []
+
+
+    myDog[0][0] = new myDogs('Snickers' , 1)
+    myDog[0][1] = new myDogs('Mars' , 2)
+    myDog[0][2] = new myDogs('Twix' , 3)
+
+    myDog[1][0] = new myDogs('Coffee Crisp' , 4)
+    myDog[1][1] = new myDogs('Oh Henry' , 5)
+    myDog[1][2] = new myDogs('Kit Kat' , 6)
+
+    myDog[2][0] = new myDogs('Aero' , 7)
+    myDog[2][1] = new myDogs('Caramilk' , 8)
+    myDog[2][2] = new myDogs('Milky Way' , 9)
+  
+    myDog[3][0] = new myDogs('Bounty' , 10)
+    myDog[3][1] = new myDogs('Hershey' , 11)
+    myDog[3][2] = new myDogs('Toblerone' , 12)
+
+
+   if ((document.getElementById('myDogInput').value == 0)&&(document.getElementById('myDogInput01').value == 0)){ myDog[0][0].myShow() }
+   if ((document.getElementById('myDogInput').value == 0)&&(document.getElementById('myDogInput01').value == 1)){ myDog[0][1].myShow() }
+   if ((document.getElementById('myDogInput').value == 0)&&(document.getElementById('myDogInput01').value == 2)){ myDog[0][2].myShow() }
+   if ((document.getElementById('myDogInput').value == 1)&&(document.getElementById('myDogInput01').value == 0)){ myDog[1][0].myShow() }
+   if ((document.getElementById('myDogInput').value == 1)&&(document.getElementById('myDogInput01').value == 1)){ myDog[1][1].myShow() }
+   if ((document.getElementById('myDogInput').value == 1)&&(document.getElementById('myDogInput01').value == 2)){ myDog[1][2].myShow() }
+   if ((document.getElementById('myDogInput').value == 2)&&(document.getElementById('myDogInput01').value == 0)){ myDog[2][0].myShow() }
+   if ((document.getElementById('myDogInput').value == 2)&&(document.getElementById('myDogInput01').value == 1)){ myDog[2][1].myShow() }
+   if ((document.getElementById('myDogInput').value == 2)&&(document.getElementById('myDogInput01').value == 2)){ myDog[2][2].myShow() }
+   if ((document.getElementById('myDogInput').value == 3)&&(document.getElementById('myDogInput01').value == 0)){ myDog[3][0].myShow() }
+   if ((document.getElementById('myDogInput').value == 3)&&(document.getElementById('myDogInput01').value == 1)){ myDog[3][1].myShow() }
+   if ((document.getElementById('myDogInput').value == 3)&&(document.getElementById('myDogInput01').value == 2)){ myDog[3][2].myShow() }
+
+}">
+
+              
+<input id="myButton01" type="button" value="Check Out This Furry" onclick="{
+                  
+                                                               
+ class myFurry {
+    constructor(passName, passAge, passColour) {
+       this.myName = passName;
+       this.myAge = passAge;
+       this.myColour = passColour;
+    }
+
+   myShow(){    
+       document.getElementById('myDiv01').innerHTML += 'Hey, I\'m ' + this.myName + '! I just turned ' + this.myAge + ' years old. My fur is ' + this.myColour + '! I am SOOOO much better than Dio!<br>'
+    }
+
+   myFurryShow(){
+       document.getElementById('myDiv01').innerHTML += 'Hi, my name is ' + this.myName + '. I am ' + this.myAge + ' years old.' + ' My fur is  ' + this.myColour + '. I am a furry from a galaxy far far away!<br>'
+    }
+
+ }  // end class myAnimal
+
+
+   myDio = new myFurry('Dio', -4 ,'blue')
+   myDio.myFurryShow()
+   
+   myJoe = new myFurry('Joe' , 5 , 'green')
+   myJoe.myShow()
+
+
+}">
+                     
+
+<div id='myDiv01'>...</div><br>

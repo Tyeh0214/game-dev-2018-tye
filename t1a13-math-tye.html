@@ -38,34 +38,7 @@
  
   <tr><td> <input type=button id="1" value="1" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="2" value="2" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="3" value="3" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="+" value="+" onclick="{setText01(this)}"> </td></tr>
  
-  <tr><td> <input type=button id="0" value="0" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="." value="." onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="(-)" value="-" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="=" value="=" onclick="{
-
-
-    if (document.getElementById('myDiv08').innerHTML != '') {
-       document.getElementById('textBox').value = document.getElementById('myDiv08').innerHTML
-   }
-
-
-    if (textBox01.value.includes('x') == true){ 
-        document.getElementById('myDiv08').innerHTML = document.getElementById('textBox').value * document.getElementById('textBox02').value 
-    } else { 
-       if (textBox01.value.includes('/') == true){ 
-           document.getElementById('myDiv08').innerHTML = document.getElementById('textBox').value / document.getElementById('textBox02').value 
-       }
-    } 
-    if (textBox01.value.includes('+') == true){ 
-       document.getElementById('myDiv08').innerHTML = (parseFloat(document.getElementById('textBox').value) + parseFloat(document.getElementById('textBox02').value))
-    } 
-    if (textBox01.value.includes('-') == true){ 
-        document.getElementById('myDiv08').innerHTML = (parseFloat(document.getElementById('textBox').value) - parseFloat(document.getElementById('textBox02').value))
-    }
-
-
-
-
-
-
-}"> </td></tr>
+  <tr><td> <input type=button id="0" value="0" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="." value="." onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="(-)" value="-" onclick="{if (textBox01.value.includes('x') == true){ setText02(this) } else { if (textBox01.value.includes('/') == true){ setText02(this) } else { if (textBox01.value.includes('+') == true){ setText02(this) } else { if (textBox01.value.includes('-') == true){ setText02(this) } else {setText0(this)}}}}}"> </td><td> <input type=button id="=" value="=" onclick="{if (document.getElementById('myDiv08').innerHTML != '') {document.getElementById('textBox').value = document.getElementById('myDiv08').innerHTML} if (textBox01.value.includes('x') == true){document.getElementById('myDiv08').innerHTML = document.getElementById('textBox').value * document.getElementById('textBox02').value} else { if (textBox01.value.includes('/') == true){document.getElementById('myDiv08').innerHTML = document.getElementById('textBox').value / document.getElementById('textBox02').value}} if (textBox01.value.includes('+') == true){document.getElementById('myDiv08').innerHTML = (parseFloat(document.getElementById('textBox').value) + parseFloat(document.getElementById('textBox02').value))} if (textBox01.value.includes('-') == true){document.getElementById('myDiv08').innerHTML = (parseFloat(document.getElementById('textBox').value) - parseFloat(document.getElementById('textBox02').value))}}"> </td></tr>
   </table>
 
 

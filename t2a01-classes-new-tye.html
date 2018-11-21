@@ -1,0 +1,142 @@
+
+
+<h2 align=center>Javascript Classes Introduction by tye</h2>
+
+
+<input type=text id="myInput" size=5 placeholder="Name" value="Mr. Weenie">
+<input type=text id="myInput01" size=5 placeholder="Age" value="">
+
+
+<input id="myButton130" type="button" value="Check Out My Doggie" onclick="{
+                                                                                 
+ class myAnimal {
+    constructor(passName, passAge) {
+       this.myName = passName;
+       this.myAge = passAge;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv130').innerHTML = 'This is ' + this.myName + '. He is ' + this.myAge + ' years old<br>'
+    }
+
+ }  // end class myAnimal
+                                                             
+
+	myDog = new myAnimal(document.getElementById('myInput').value , document.getElementById('myInput01').value)
+        myDog.myShow()
+           
+
+
+
+                                   
+}"><br><br>
+
+<div id='myDiv130'>...</div><br>
+
+<input type=text id="myInput02" size=5 placeholder="Species" value="">
+<input type=text id="myInput03" size=5 placeholder="Length" value="">
+
+<input id="myButton131" type="button" value="Check Out This Snake" onclick="{
+                                                                                 
+ class mySnake {
+    constructor(passSpecies, passLength) {
+       this.mySpecies = passSpecies;
+       this.myLength = passLength;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv131').innerHTML = 'This is a ' + this.mySpecies + '. It is ' + this.myLength + ' feet long.<br>'
+    }
+
+ }  // end class mySnake
+                                                             
+
+	mySnake = new mySnake(document.getElementById('myInput02').value , document.getElementById('myInput03').value)
+        mySnake.myShow()
+
+
+
+                                               
+}"><br><br>
+<div id='myDiv131'>...</div><br>
+
+<input type=text id="myInput04" size=5 placeholder="Name" value="">
+<input type=text id="myInput05" size=5 placeholder="Eye Colour" value="">
+
+<input id="myButton132" type="button" value="Check Out This Human" onclick="{
+                                                                                 
+ class myHuman {
+    constructor(passName, passEyeColour) {
+       this.myName = passName;
+       this.myEyeColour = passEyeColour;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv132').innerHTML = 'This is ' + this.myName + '. He has ' + this.myEyeColour + ' eyes.<br>'
+    }
+
+ }  // end class myHuman
+                                                             
+
+	myHuman = new myHuman(document.getElementById('myInput04').value , document.getElementById('myInput05').value)
+        myHuman.myShow()
+
+
+
+                                               
+}"><br><br>
+<div id='myDiv132'>...</div><br>
+
+<input type=text id="myInput06" size=5 placeholder="Type" value="">
+<input type=text id="myInput07" size=5 placeholder="Sugar" value="">
+
+<input id="myButton133" type="button" value="Check Out This Energy Drink" onclick="{
+                                                                                 
+ class myEnergyDrink {
+    constructor(passType, passSugar) {
+       this.myType = passType;
+       this.mySugar = passSugar;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv133').innerHTML = 'This is ' + this.myType + '. It has ' + this.mySugar + ' grams of sugar!<br>'
+    }
+
+ }  // end class myEnergyDrink
+                                                             
+
+	myEnergyDrink = new myEnergyDrink(document.getElementById('myInput06').value , document.getElementById('myInput07').value)
+        myEnergyDrink.myShow()
+
+
+
+                                               
+}"><br><br>
+<div id='myDiv133'>...</div><br>
+
+<input type=text id="myInput08" size=5 placeholder="Colour" value="">
+<input type=text id="myInput09" size=5 placeholder="Colour" value="">
+
+<input id="myButton134" type="button" value="Check Out My Creativity" onclick="{
+                                                                                 
+ class myCreativity {
+    constructor(passColour, passColour2) {
+       this.myColour = passColour;
+       this.myColour2 = passColour2;
+    }
+
+    myShow(){    
+       document.getElementById('myDiv134').innerHTML = 'This is ' + this.myColour + '. It is very ' + this.myColour2 + '.<br>'
+    }
+
+ }  // end class myCreativity
+                                                             
+
+	myColour = new myCreativity(document.getElementById('myInput08').value.fontcolor('#FF00F0') , document.getElementById('myInput09').value.fontcolor('#00FFFF'))
+        myColour.myShow()
+
+
+
+                                               
+}"><br><br>
+<div id='myDiv134'>...</div><br>
