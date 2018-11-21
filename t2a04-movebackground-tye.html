@@ -1,1 +1,80 @@
-<h2 align=centre> Move Background </h2>
+<h2 align=center><font color=white> Move Background </font></h2>
+
+<body id="mySpace" style="background: url(https://storywarren.com/wp-content/uploads/2016/09/space-1.jpg); background-size: 100% 100%">
+<img id="myImage01" width=120 src="http://pngimg.com/uploads/hot_dog/hot_dog_PNG10232.png" style="position:absolute; width:240px; height:120; left:300px; top:100px;">
+
+<input type=button id="myButton01" value="Background Right" onclick="{
+myTemp = '100px 0px'
+myGlobalX += 50
+myTemp = myGlobalX + 'px 0px'
+
+document.getElementById('mySpace').style.backgroundPosition = myTemp
+
+}">
+
+<input type=button value="Auto Background Right" onclick="{
+	clearInterval(myClock)
+	myClock = setInterval(function(){
+		document.getElementById('myButton01').click()
+}, 100)
+
+
+
+
+}">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+let myClock
+let myGlobalX = 0
+let myGlobalY = 0
+
+document.onkeydown = checkKey
+
+function checkKey(myEvent){
+
+myTemp = '100px 0px'
+myGlobalX += 50
+myTemp = myGlobalX + 'px 0px'
+myTemp2 = '0px ' + myGlobalX + 'px'
+myGlobalY -= 50
+myTemp3 = myGlobalY + 'px 0px'
+myTemp4 = '0px ' + myGlobalY + 'px'
+
+
+
+ if (myEvent.keyCode == 87){document.getElementById('mySpace').style.backgroundPosition = myTemp2
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) - 5 + 'px'
+}   //W
+
+ if (myEvent.keyCode == 65){document.getElementById('mySpace').style.backgroundPosition = myTemp
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 5 + 'px'
+}    //A
+
+ if (myEvent.keyCode == 83){document.getElementById('mySpace').style.backgroundPosition = myTemp4
+	document.getElementById('myImage01').style.top = parseInt(document.getElementById('myImage01').style.top) + 5 + 'px'
+}   //S
+
+ if (myEvent.keyCode == 68){document.getElementById('mySpace').style.backgroundPosition = myTemp3
+	document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 5 + 'px'
+}   //D
+
+}
+
+</script>
+
+
+
