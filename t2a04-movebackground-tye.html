@@ -17,7 +17,9 @@ document.getElementById('mySpace').style.backgroundPosition = myTemp
 <input type=button value="Auto Background Right" onclick="{
 	clearInterval(myClock)
 	myClock = setInterval(function(){
-		document.getElementById('myButton01').click()
+		document.getElementById('myButton01').click();
+document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) - 5 + 'px'
+
 }, 100)
 
 
