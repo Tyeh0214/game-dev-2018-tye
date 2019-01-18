@@ -11,21 +11,24 @@
 <img id="myImage04" src="https://vignette.wikia.nocookie.net/clubpenguin/images/b/b9/Card-Jitsu_Mat_furniture_icon.png/revision/latest?cb=20120421081408" style="position:relative; width:250px; height:75; left:480px; top:610px; -webkit-transform: scaleX(-1);transform: scaleX(-1);">
 
 
-<img id="myImage09" src="https://www.freeiconspng.com/uploads/red-arrow-left-pointing-5.png" style="position:absolute; width:75px; height:75px; left:20px; top:20px;">
+<img id="myImage09" class="myPop" src="RedArrow.png" style="position:absolute; width:75px; height:75px; left:20px; top:20px;">
 
 
-<img id="myImage05" src="https://fanon.clubpenguinwiki.info/static/images/fanon/thumb/b/b9/Dime_Penguin.PNG/300px-Dime_Penguin.PNG" style="position:absolute; width:210px; height:250; left:197px; top:420px;">
+<img id="myImage05" class="myPop" src="https://fanon.clubpenguinwiki.info/static/images/fanon/thumb/b/b9/Dime_Penguin.PNG/300px-Dime_Penguin.PNG" style="position:absolute; width:210px; height:250; left:197px; top:420px;">
 
-<img id="myImage06" src="https://vignette.wikia.nocookie.net/clubpenguin/images/a/a9/Penguin_Player_card_look_1222333.png/revision/20140723221416" style="position:absolute; width:195px; height:250; left:567px; top:420px;">
+<img id="myImage06" class="myPop" src="https://vignette.wikia.nocookie.net/clubpenguin/images/a/a9/Penguin_Player_card_look_1222333.png/revision/20140723221416" style="position:absolute; width:195px; height:250; left:567px; top:420px;">
 
-<img id="myImage07" src="https://kosiucoo.files.wordpress.com/2012/12/sensei24.png" style="position:absolute; width:200px; height:250; left:917px; top:420px;">
+<img id="myImage07" class="myPop" src="https://kosiucoo.files.wordpress.com/2012/12/sensei24.png" style="position:absolute; width:200px; height:250; left:917px; top:420px;">
 
-<img id="myImage08" src="https://vignette.wikia.nocookie.net/clubpenguin/images/6/6e/Experimental_Penguins_Penguin_Sprite.png/revision/latest?cb=20131114032522" style="position:absolute; width:210px; height:260; left:1277px; top:420px;">
+<img id="myImage08" class="myPop" src="https://vignette.wikia.nocookie.net/clubpenguin/images/6/6e/Experimental_Penguins_Penguin_Sprite.png/revision/latest?cb=20131114032522" style="position:absolute; width:210px; height:260; left:1277px; top:420px;">
+
+
+<audio id="myAudio" src="Club-Penguin-Music.mp3" loop="loop" type="audio/mpeg"></audio>
 
 
 <style>
 
-img:hover {
+.myPop:hover {
     margin-top: 0px;
     -moz-box-shadow: 0px 0px 4px 1px grey;
     -webkit-box-shadow: 0px 0px 4px 1px grey;
@@ -35,6 +38,11 @@ img:hover {
 </style>
 
 <script>
+
+window.onload = function(){
+document.getElementById('myAudio').play()
+
+}
 
 let Pink = document.getElementById("myImage05");
 Pink.onclick = function(e) {

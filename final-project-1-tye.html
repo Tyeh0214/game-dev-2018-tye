@@ -1,11 +1,19 @@
 <body style="background: url(https://vignette.wikia.nocookie.net/clubpenguin/images/6/6d/Dojo_2014.png/revision/latest?cb=20141212225516&path-prefix=es); background-size: 100% 100%">
 
-<img id="myImage01" class="myPop" src="Book.png" style="position:absolute; width:128px; height:106; left:1348px; top:539px;">
-<img id="myImage02" class="myPop"  src="Cards.png" style="position:absolute; width:148; height:97; left:1333px; top:649px;">
-<img id="myImage03" src="Dio's Quote.png" style="position:absolute; width:160; height:60; left:783px; top:350px;">
-<img id="myImage04" src="Open-Book.png" style="position:absolute; display:block; width:960; height:560; left:322px; top:120px;">
-<img id="myImage05" src="Rules.png" style="position:absolute; display:block; width:360; height:510; left:400px; top:140px;">
+<img id="myImage01" class="myPop" src="Book.png" style="position:absolute; width:128px; height:106; left:1348px; top:535px;">
 
+<img id="myImage02" class="myPop"  src="Cards.png" style="position:absolute; width:148; height:98; left:1333px; top:644px;">
+
+<img id="myImage03" src="Dio's Quote.png" style="position:absolute; width:160; height:60; left:783px; top:350px;">
+
+<img id="myImage04" src="Open-Book.png" style="position:absolute; display:none; width:960; height:560; left:322px; top:120px;">
+
+<img id="myImage05" src="Rules.png" style="position:absolute; display:none; width:360; height:510; left:400px; top:140px;">
+
+<img id="myImage06" src="Rules2.png" style="position:absolute; display:none; width:360; height:510; left:830px; top:135px;">
+
+
+<audio id="myAudio" src="Club-Penguin-Music.mp3" loop="loop" type="audio/mpeg"></audio>
 
 <style>
 
@@ -20,17 +28,21 @@
 
 <script>
 
-let Book = document.getElementById("myImage01");
+	window.onload = function() {
+    document.getElementById("myAudio").play();
+}
+
+	let Book = document.getElementById("myImage01");
 Book.onclick = myShow
   
 
-
-let Cards = document.getElementById("myImage02");
+	let Cards = document.getElementById("myImage02");
 Cards.onclick = function(e) {
   window.location.href = "final-project-2-tye.html";
 }
 
-function myShow() {
+
+	function myShow() {
   var x = document.getElementById("myImage04");
   if (x.style.display === "block") {
     x.style.display = "none";
@@ -44,6 +56,15 @@ function myShow() {
   } else {
     y.style.display = "block";
   }
+
+  var z = document.getElementById("myImage06");
+  if (z.style.display === "block") {
+    z.style.display = "none";
+  } else {
+    z.style.display = "block";
+  }
+
+
 
 }
 
