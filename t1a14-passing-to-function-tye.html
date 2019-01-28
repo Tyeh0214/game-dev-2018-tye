@@ -1,18 +1,43 @@
 <h2 align=center>Passing to functions by Tye</h2>
 
-<input id="myIn" type=text  value="">
-
-<input type=button value="myFun('Yay!')" onclick="{
+<input id="myIn" type=text  placeholder="Type Something" value=""> 
+<input type=button value="Passing 1" onclick="{
    
-   document.getElementById('myOut').innerHTML += myFun('Yay!')
+   document.getElementById('myOut').innerHTML += myFun(document.getElementById('myIn').value)
            
                                                    }">
+ <br>
 
+
+<input id="myIn1" type=text placeholder="Type A Name" value="">
+<input type=button value="Passing 2" onclick="{
+   
+   document.getElementById('myOut').innerHTML += myFun1(document.getElementById('myIn1').value)
+           
+                                                   }">
+<br>
+
+
+
+
+
+<input id="myIn2" type=text placeholder="Type A Food" value="">
+<input type=button value="Passing 3" onclick="{
+   
+   document.getElementById('myOut').innerHTML += myFun2(document.getElementById('myIn2').value)
+           
+                                                   }">
 
 <script>
 
 function myFun(myIn){
   return myIn + '<br>'
+                     }
+function myFun1(myIn1){
+  return myIn1 + ' sucks.' + '<br>'
+                     }
+function myFun2(myIn2){
+  return myIn2 + ' tastes horrible, like really really bad...' + '<br>'
                      }
 
 </script>
