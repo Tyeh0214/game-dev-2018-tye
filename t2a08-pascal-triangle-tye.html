@@ -1,77 +1,45 @@
-
-
-    <div class="container">
-        <input type="text" placeholder="Enter number of rows for Pascal Triangle" style="width:10%" id="numRows" value="5">
-        <input type="submit"" value="Go" name="Go" onClick="printPascalTriangle()">
-        <div id="pascal"></div>
-    </div>
-
-
-<style>
-
-.container{
-  margin: 0 auto;
-}
-.block{
-  display: inline-block;
-  position:relative;
-  border: 1px solid grey;
-  text-align:center;
-  font-size:.8em;
-  width:2em;
-}
-.divblock{
-  text-align:center;
-  vertical-align: middle;
-}
-#pascal{
-  margin: 0 auto;
-  text-aligncenter;
-}
-.block:nth-child(odd) {
-  background: cyan;
-}
-
-.block:nth-child(even) {
-  background: grey;
-}
-
-</style>
-
+<h2 align=center> T2A08-Pascal-Triangle-Tye</h2> 
 
 <script>
-
-function printPascalTriangle(){
-  document.getElementById("pascal").innerHTML = "";
-  var rows = document.getElementById("numRows").value;
-  var arr = generatePascal(+rows);
-  for(var i=0;i<arr.length;i++){
-    var div = document.createElement('div');
-    div.className ="divblock";
-    for(var j=0;j<arr[i].length;j++){
-      var span = document.createElement('span');
-      span.innerHTML=arr[i][j];
-      span.className ="block";
-      div.appendChild(span);
+function generate(numRows) {
+    numRows = document.getElementById('myText01').value;  
+    var result = [];
+    if (numRows <= 0)
+           return result
+ 
+    var pre = [];
+    pre.push(1 + '<br>');
+    result.push(pre)
+ 
+    for (var i = 2; i <= numRows; i++) {
+        var cur = [];
+ 
+        cur.push(1); //first
+        for (var j = 0; j < pre.length - 1; j++) {
+            cur.push(pre[j] + pre[j + 1]); //middle
+        }
+        cur.push(1)//last
+ 
+        result.push(cur.join(' ') + '<br>');
+        pre = cur
     }
-    document.getElementById("pascal").appendChild(div);
-  }
-}
-function generatePascal(n){
-  var arr = [];
-  var tmp;
-  for(var i=0;i<n;i++){
-    arr[i]=[];
-    for(var j=0; j<=i; j++){
-      if(j==i){
-        arr[i].push(1);
-      }else{
-        tmp = (!!arr[i-1][j-1]?arr[i-1][j-1]:0)+(!!arr[i-1][j]?arr[i-1][j]:0);
-        arr[i].push(tmp);
-      }
-    }
-  }
-  return arr;
+    return result.join(' ')
 }
 
 </script>
+
+
+
+
+<input type=text id="myText01" value=5 placeholder="Put numbers here"><br>
+
+<input type=button value="Click" onclick="{
+                                          
+document.getElementById('myDiv01').innerHTML = ''                                          
+                                          
+document.getElementById('myDiv01').innerHTML = generate()
+
+
+}">
+
+<div id="myDiv01">...</div>
